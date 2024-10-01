@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="pagestyle.css" rel="stylesheet" type="text/css" />
+    <link href="pagestyle.css" rel="stylesheet" type="text/css"/>
     <script src="mpage.js"></script>
   </head>
   <body>
@@ -92,7 +92,7 @@
           <li><a href="All_Member.php">All Member</a></li>
           <li><a href="Add_Product_form.php">Add Product</a></li>
           <li><a href="Add_Member_form.php">Add Member</a></li>
-          <li><a href="cart/cart.php">Cart</a></li>
+          <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

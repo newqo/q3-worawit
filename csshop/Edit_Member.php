@@ -84,7 +84,7 @@
             <li><a href="All_Member.php">All Member</a></li>
             <li><a href="Add_Product_form.php">Add Product</a></li>
             <li><a href="Add_Member_form.php">Add Member</a></li>
-            <li><a href="cart/cart.php">Cart</a></li>
+            <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

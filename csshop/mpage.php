@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="pagestyle.css" rel="stylesheet" type="text/css" />
+    <link href="pagestyle.css" rel="stylesheet" type="text/css">
     <script src="mpage.js"></script>
     <script src="member.js"></script>
   </head>
@@ -60,7 +60,7 @@
               $userRole = $stmt->fetch();
               if($userRole['user_role'] == 0)
               {
-                $stmt2 = $pdo->prepare("SELECT orders.ord_id AS 'รหัสคำสั่งซื้อ',product.pname AS 'pname',quantity,(product.price * item.quantity) AS 'ราคารวม' FROM orders JOIN item ON orders.ord_id = item.ord_id JOIN product ON item.pid = product.pid WHERE orders.username = ? ");
+                $stmt2 = $pdo->prepare("SELECT orders.ord_id AS 'รหัสคำสั่งซื้อ',product.pname AS 'pname', item.quantity AS 'จำนวนสินค้า',(product.price * item.quantity) AS 'ราคารวม' FROM orders JOIN item ON orders.ord_id = item.ord_id JOIN product ON item.pid = product.pid WHERE orders.username = ? ");
                 $stmt2->bindParam(1,$_SESSION['username']);
                 $stmt2->execute();
                 echo "<table class='order-table'>";
@@ -74,7 +74,7 @@
                     echo "<tr>";
                     echo "<td>" . $order ["รหัสคำสั่งซื้อ"] . "</td>";
                     echo "<td>" . $order ["pname"] . "</td>";
-                    echo "<td>" . $order ["quantity"] . "</td>";
+                    echo "<td>" . $order ["จำนวนสินค้า"] . "</td>";
                     echo "<td>" . $order ["ราคารวม"] . "</td>";
                     echo "</tr>";
                 }
@@ -110,7 +110,7 @@
           <li><a href="All_Member.php">All Member</a></li>
           <li><a href="Add_Product_form.php">Add Product</a></li>
           <li><a href="Add_Member_form.php">Add Member</a></li>
-          <li><a href="cart/cart.php">Cart</a></li>
+          <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

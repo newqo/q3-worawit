@@ -62,13 +62,14 @@
 
                 $_SESSION["fullname"] = $row["name"];   
                 $_SESSION["username"] = $row["username"];
+                $_SESSION["role"] = $row["user_role"];
             
             
                 // echo "เข้าสู่ระบบสำเร็จ<br>";
                 // echo "<a href='mpage.php'>ไปยังหน้าหลักของผู้ใช้</a>"; 
-                echo"<hr>";
-                print_r($_COOKIE);
-                print_r($_SESSION);
+                // echo"<hr>";
+                // print_r($_COOKIE);
+                // print_r($_SESSION);
                 header("location: mpage.php");
             
             } else {
@@ -89,7 +90,7 @@
           <li><a href="All_Member.php">All Member</a></li>
           <li><a href="Add_Product_form.php">Add Product</a></li>
           <li><a href="Add_Member_form.php">Add Member</a></li>
-          <li><a href="cart/cart.php">Cart</a></li>
+          <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

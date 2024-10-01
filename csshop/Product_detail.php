@@ -77,7 +77,11 @@
                     echo "<label style='height: 100px;'>รายละเอียดสินค้า: </label>" . $row["pdetail"] . "<br>";
                     echo "<label>ราคา: </label>" . $row["price"] . "บาท<br>";
                     echo "<div class='buy-back-bt'>";
-                    echo "<a href='#' class='bt'>ซื้อสินค้า</a>";
+                    // echo "<a href='#' class='bt'>ซื้อสินค้า</a>";
+                    echo "<form method='post' action='cart.php?action=add&pid=" . $row['pid']. "&pname=" . $row['pname']. "&price=".$row['price'] . "'>";
+                    echo "<input type='number' name='qty' value='1' min='1' max='". $row['product_quantity'] ."' class='item-amount-bt'>";
+                    echo "<input type='submit' value='ซื้อสินค้า' class='bt'>";
+                    echo "</form>";
                     echo "<a href='All_Product.php' class='bt'>ย้อนกลับ</a>";
                     echo "<a href='Edit_Product_form.php?pid=". $row["pid"] . "' class='bt edit-bt2'>แก้ไข</a>";
                     echo "<a href='#' onclick=\"confirm_delete_product('{$row["pid"]}')\" class='bt delete-bt2'>ลบ</a>";
@@ -95,7 +99,7 @@
             <li><a href="All_Member.php">All Member</a></li>
             <li><a href="Add_Product_form.php">Add Product</a></li>
             <li><a href="Add_Member_form.php">Add Member</a></li>
-            <li><a href="cart/cart.php">Cart</a></li>
+            <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

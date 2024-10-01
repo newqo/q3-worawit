@@ -430,27 +430,28 @@ div.product-list {
   font-weight: bold;
 }
 
-.setcenter table{
+.setcenter table , .setcenter form table{
   border-collapse: collapse;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
 
-.setcenter table th {
+.setcenter table th , .setcenter form table th{
   background-color:#ccffcc;
 }
 
-.setcenter table, .setcenter table th, .setcenter table tr , .setcenter table tr td{
+.setcenter table, .setcenter table th, .setcenter table tr , .setcenter table tr td, 
+.setcenter form table, .setcenter form table th, .setcenter form table tr , .setcenter form table tr td{
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
 
-.order-table tr:hover , .order-all-user-table tr:hover{
+.order-table tr:hover , .order-all-user-table tr:hover, .cart tr:hover{
   background-color: #d7d7d7;
 }
 
-table.order-all-user-table tr{
+table.order-all-user-table tr , table.cart tr{
   padding: 40%;
 }
 
@@ -461,4 +462,13 @@ table.order-all-user-table tr{
 
 .tr-padding td, .tr-padding th{
   padding: 1%;
+}
+
+
+.cart-bt {
+  justify-content: center;
+}
+
+.item-amount-bt{
+  font-size: 1em;
 }

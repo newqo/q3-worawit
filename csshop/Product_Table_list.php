@@ -60,6 +60,9 @@
             echo "<th>รหัสสินค้า</th>";
             echo "<th>ชื่อสินค้า</th>";
             echo "<th>รายละเอียด</th>";
+            if($_SESSION["role"] == 1){
+              echo "<th>จำนวนคงเหลือ</th>";
+            }
             echo "<th>ราคา</th>";
             echo "</tr>";
             while ($row = $stmt->fetch()) {
@@ -68,8 +71,11 @@
                 echo "<td>" . $row ["pid"] . "</td>";
                 echo "<td>" . $row ["pname"] . "</td>";
                 echo "<td>" . $row ["pdetail"] . "</td>";
+                if($_SESSION["role"] == 1)
+                {
+                  echo "<td>" . $row ["product_quantity"] . "</td>";
+                }
                 echo "<td>" . $row ["price"] . " บาท" . "</td>";
-
                 echo "</tr>";
             }
             echo "</table>";
@@ -85,7 +91,7 @@
           <li><a href="All_Member.php">All Member</a></li>
           <li><a href="Add_Product_form.php">Add Product</a></li>
           <li><a href="Add_Member_form.php">Add Member</a></li>
-          <li><a href="cart/cart.php">Cart</a></li>
+          <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>

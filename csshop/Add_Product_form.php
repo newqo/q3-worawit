@@ -59,6 +59,8 @@
                 <textarea name="pdetail" rows="3" cols="40" required class="input-form"></textarea><br>
                 <label for="" class="label-form">ราคาสินค้า</label>
                 <input type="number" name="price" required class="input-form"><br>
+                <label for="" class="label-form">จำนวนสินค้า</label>
+                <input type="number" name="qty" required class="input-form"><br>
                 <label for="" class="label-form" class="input-form">รูปภาพสินค้า</label>
                 <input type="file" accept=".jpg" name="image_upload" required><br>
                 <div>
@@ -77,7 +79,7 @@
           <li><a href="All_Member.php">All Member</a></li>
           <li><a href="Add_Product_form.php">Add Product</a></li>
           <li><a href="Add_Member_form.php">Add Member</a></li>
-          <li><a href="cart/cart.php">Cart</a></li>
+          <li><a href="cart.php">Cart</a></li>
         </ul>
       </nav>
     </main>
